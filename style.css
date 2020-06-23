@@ -1,0 +1,27 @@
+.col-3 {
+    height: 10vw;
+    padding: 1vh!important;
+}
+
+#table {
+    width: 40%;
+}
+
+.game-cell {
+    display: table;
+    border-radius: 10%;
+    width: 99%;
+    height: 99%;
+}
+
+.cell-content {
+    display: none;
+    vertical-align: middle;
+    color: white;
+    margin-top: 50%;
+    font-size: 12vh;
+}
+
+.game-cell:hover {
+    cursor: pointer;
+}
