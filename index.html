@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <title>Memory Game</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -11,102 +12,107 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
-  <body>
+</head>
+
+<body>
     <header>
-      <h1 class="bg-primary text-center p-2 text-white"> Memory Game by Vlad</h1>
+        <h1 class=" bg-primary text-center p-2 text-white"> Memory Game by Vlad</h1>
     </header>
     <div id="game-interface" class="text-center">
-      <div id="table" class="container">
-        <div class="row">
-          <div class="col-3">
-            <div class="game-cell bg-primary">
-              <span class="cell-content"> 0 </span>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="game-cell bg-primary">
-              <span class="cell-content"> 0 </span>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="game-cell bg-primary">
-              <span class="cell-content"> 0 </span>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="game-cell bg-primary">
-              <span class="cell-content"> 0 </span>
-            </div>
-          </div>
+        <div id="playAgainInterface">
+            <h2> Did you enjoy the game? </h2>
+            <button id="playAgain"> Play Again </button>
         </div>
-        <div class="row">
-          <div class="col-3">
-            <div class="game-cell bg-primary">
-              <span class="cell-content"> 0 </span>
+        <div id="table" class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="game-cell">
+                        <span class="cell-content"> 0 </span>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="game-cell">
+                        <span class="cell-content"> 0 </span>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="game-cell">
+                        <span class="cell-content"> 0 </span>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="game-cell">
+                        <span class="cell-content"> 0 </span>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-3">
-            <div class="game-cell bg-primary">
-              <span class="cell-content"> 0 </span>
+            <div class="row">
+                <div class="col-3">
+                    <div class="game-cell">
+                        <span class="cell-content"> 0 </span>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="game-cell">
+                        <span class="cell-content"> 0 </span>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="game-cell">
+                        <span class="cell-content"> 0 </span>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="game-cell">
+                        <span class="cell-content"> 0 </span>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-3">
-            <div class="game-cell bg-primary">
-              <span class="cell-content"> 0 </span>
+            <div class="row">
+                <div class="col-3">
+                    <div class="game-cell">
+                        <span class="cell-content"> 0 </span>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="game-cell">
+                        <span class="cell-content"> 0 </span>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="game-cell">
+                        <span class="cell-content"> 0 </span>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="game-cell">
+                        <span class="cell-content"> 0 </span>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-3">
-            <div class="game-cell bg-primary">
-              <span class="cell-content"> 0 </span>
+            <div class="row">
+                <div class="col-3">
+                    <div class="game-cell">
+                        <span class="cell-content"> 0 </span>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="game-cell">
+                        <span class="cell-content"> 0 </span>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="game-cell">
+                        <span class="cell-content"> 0 </span>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="game-cell">
+                        <span class="cell-content"> 0 </span>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="row">
-          <div class="col-3">
-            <div class="game-cell bg-primary">
-              <span class="cell-content"> 0 </span>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="game-cell bg-primary">
-              <span class="cell-content"> 0 </span>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="game-cell bg-primary">
-              <span class="cell-content"> 0 </span>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="game-cell bg-primary">
-              <span class="cell-content"> 0 </span>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-3">
-            <div class="game-cell bg-primary">
-              <span class="cell-content"> 0 </span>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="game-cell bg-primary">
-              <span class="cell-content"> 0 </span>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="game-cell bg-primary">
-              <span class="cell-content"> 0 </span>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="game-cell bg-primary">
-              <span class="cell-content"> 0 </span>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- JQuery -->
@@ -114,9 +120,10 @@
 
     <!-- Optional JavaScript -->
     <script src="index.js"></script>
-    
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+</body>
+
 </html>
