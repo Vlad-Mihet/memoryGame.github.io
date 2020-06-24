@@ -12,6 +12,22 @@ var winCondition = false;
 var playAgainButton = document.getElementById('playAgain');
 var lastPair = [];
 
+// Make the function show all cards for a second, then hide them all
+
+function showCardsAtStart() {
+    setTimeout(() => {
+        setTimeout(() => {
+            for (let i = 0; i < gameCards.length; i++) {
+                gameCells[i].style.display = 'none';
+            }
+        }, 1250);
+        for (let i = 0; i < gameCards.length; i++) {
+            gameCells[i].style.display = 'table-cell';
+        }
+    }, 1250)
+}
+
+
 // Make cards return to the state they were in at the beginning of the game; every new game
 
 function uncheckCards() {
@@ -52,6 +68,7 @@ playAgainButton.addEventListener('click', () => {
     uncheckCards();
     generateRandomCardsContent();
     showCardsOnClick();
+    showCardsAtStart();
 })
 
 // Create the win function in order to make the play-again interface appear after every finished game;
@@ -156,3 +173,4 @@ function checkIfMatch(array) {
 
 generateRandomCardsContent();
 showCardsOnClick();
+showCardsAtStart();
