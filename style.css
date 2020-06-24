@@ -20,7 +20,7 @@
     vertical-align: middle;
     color: white;
     margin-top: 50%;
-    font-size: 10vh;
+    font-size: 5rem;
 }
 
 .game-cell:hover {
@@ -47,4 +47,16 @@
 
 #play-again-menu {
     display: none;
+}
+
+@media (max-width: 420px) {
+    #table {
+        width: 100%;
+    }
+    .col-3 {
+        height: 25vw;
+    }
+    .cell-content {
+        font-size: 2.5rem;
+    }
 }
