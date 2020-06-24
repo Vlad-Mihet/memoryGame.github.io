@@ -10,6 +10,7 @@ var rightPairs = 0;
 var clicks = 0;
 var winCondition = false;
 var playAgainButton = document.getElementById('playAgain');
+var lastPair = [];
 
 // Make cards return to the state they were in at the beginning of the game; every new game
 
@@ -40,6 +41,7 @@ playAgainButton.addEventListener('click', () => {
     rightPairs = 0;
     openedCards = [];
     cardIndexes = [];
+    lastPair = [];
     clicks = 0;
     winCondition = false;
     randomNumbers = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
@@ -90,6 +92,22 @@ function generateRandomCardsContent() {
     }
 };
 
+// A function used to check for the last pair of card contents in order to turn them green at the end of the game 
+
+function checkForLastTwo() {
+    for (let i = 0; i < gameCards.length; i++) {
+        if (!(gameCards[i].classList.contains('guessed'))) {
+            lastPair.push(i);
+        }
+    }
+    if (lastPair.length == 2) {
+        gameCards[lastPair[0]].style.backgroundColor = 'green';
+        gameCards[lastPair[1]].style.backgroundColor = 'green';
+    }
+    lastPair.pop();
+    lastPair.pop();
+}
+
 // A function used to check whether the 2 cards that can be selected at once do match or not.
 
 function checkIfMatch(array) {
@@ -122,9 +140,12 @@ function checkIfMatch(array) {
         gameCards[cardIndexes[0]].classList.add('guessed');
         gameCards[cardIndexes[1]].classList.add('guessed');
         rightPairs++;
+        checkForLastTwo();
         if (rightPairs == 8) {
-            alert(`You've won in ${clicks} clicks!`);
-            win();
+            setTimeout(() => {
+                alert(`You've won in ${clicks} clicks!`);
+                win();
+            }, 500);
         }
     }
     array.pop();
